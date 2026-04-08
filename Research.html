@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the scholarly research and studies conducted on Hussain Ul Haque, a renowned novelist, storywriter, and Sufi scholar.">
+    <meta name="keywords" content="Hussain Ul Haque, Urdu literature, research, fiction, Sufism">
+    <meta name="author" content="Hussain Ul Haque">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Research on Hussain Ul Haque">
+    <meta property="og:description" content="Discover the academic research and studies on Hussain Ul Haque's literary contributions.">
+    <meta property="og:image" content="/Awards/a1.jpg">
+    <meta property="og:url" content="https://hussainulhaque.com/research.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research on Hussain Ul Haque">
+    <meta name="twitter:description" content="Discover the academic research and studies on Hussain Ul Haque's literary contributions.">
+    <meta name="twitter:image" content="/Awards/a1.jpg">
+    <title>Research - Hussain Ul Haque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="l1.jpg" type="image/png">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            --s: 18px;
+            --_g: #0000 83%, #ffffff 85% 99%, #0000 101%;
+            background:
+                radial-gradient(22% 24% at right, var(--_g)) calc(var(--s)/ 2) var(--s),
+                radial-gradient(22% 24% at left, var(--_g)) calc(var(--s)/-2) var(--s),
+                radial-gradient(24% 22% at top, var(--_g)) 0 calc(var(--s)/ 2),
+                radial-gradient(24% 22% at bottom, var(--_g)) 0 calc(var(--s)/-2)
+                #024379;
+            background-size: calc(2*var(--s)) calc(2*var(--s));
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #03121e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #loader {
+            position: relative;
+            width: clamp(100px, 15vw, 150px);
+            height: clamp(100px, 15vw, 150px);
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            animation: spin 2s linear infinite;
+            will-change: transform;
+        }
+
+        #loader:before,
+        #loader:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+        }
+
+        #loader:before {
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-top-color: #d4a017;
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:after {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-top-color: #2c3e50;
+            animation: spin 1.5s linear infinite;
+        }
+
+        #loader-text {
+            margin-top: 1.5rem;
+            color: #d4a017;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            text-transform: uppercase;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ecf0f1;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.725rem, 2.875vw, 2.07rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo a:hover {
+            color: #3498db;
+        }
+
+        .logo-subtitle {
+            color: #d4a017;
+            font-size: 0.8rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(169, 163, 163, 0.283), rgba(0, 0, 0, 0.7)), url('b1.jpg') center/cover no-repeat;
+            padding: 8rem 2rem;
+            min-height: 70vh;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1800px;
+            margin: 8% auto 0;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 5.75vw, 4.025rem);
+            line-height: 1.3;
+        }
+
+        .title span {
+            color: #3498db;
+        }
+
+        .corner-img {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            width: auto;
+            height: clamp(150px, 30vw, 300px);
+            z-index: 1;
+            object-fit: contain;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Research Table */
+        .research-table-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .research-table-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .research-table th,
+        .research-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .research-table th {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+
+        .research-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .research-table tr:hover {
+            background-color: #e8ecef;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-info,
+        .developer-info,
+        .social-media {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .footer p,
+        .footer a {
+            font-size: 1rem;
+            color: #bdc3c7;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #3498db;
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+            color: #bdc3c7;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #3498db;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                position: relative;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 0;
+                z-index: 100;
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: 400px;
+                padding: 1rem;
+            }
+
+            .nav-links a {
+                padding: 0.8rem;
+                font-size: 1.1rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 50vh;
+            }
+
+            .hero-content {
+                margin-top: 0;
+            }
+
+            .corner-img {
+                height: clamp(120px, 25vw, 240px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 40vh;
+            }
+
+            .title {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .corner-img {
+                height: clamp(90px, 20vw, 180px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .research-table-container {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .research-table-container h2 {
+                font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            }
+
+            .research-table th,
+            .research-table td {
+                font-size: 0.9rem;
+                padding: 0.75rem;
+            }
+
+            .logo a {
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 2rem 1rem;
+                min-height: 30vh;
+            }
+
+            .title {
+                font-size: clamp(1.2rem, 4vw, 1.8rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+
+            .corner-img {
+                height: clamp(75px, 15vw, 150px);
+            }
+
+            .research-table th,
+            .research-table td {
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+        }
+
+        /* Responsive Preloader */
+        @media (max-width: 992px) {
+            #loader {
+                width: clamp(80px, 12vw, 120px);
+                height: clamp(80px, 12vw, 120px);
+            }
+            #loader:before { top: 4px; left: 4px; right: 4px; bottom: 4px; }
+            #loader:after { top: 12px; left: 12px; right: 12px; bottom: 12px; }
+            #loader-text { margin-top: 1.2rem; font-size: clamp(1rem, 2.5vw, 1.3rem); }
+        }
+
+        @media (max-width: 768px) {
+            #loader {
+                width: clamp(60px, 10vw, 100px);
+                height: clamp(60px, 10vw, 100px);
+            }
+            #loader:before { top: 3px; left: 3px; right: 3px; bottom: 3px; }
+            #loader:after { top: 10px; left: 10px; right: 10px; bottom: 10px; }
+            #loader-text { margin-top: 1rem; font-size: clamp(0.9rem, 2.5vw, 1.1rem); }
+        }
+
+        @media (max-width: 576px) {
+            #loader {
+                width: clamp(50px, 8vw, 80px);
+                height: clamp(50px, 8vw, 80px);
+            }
+            #loader:before { top: 2px; left: 2px; right: 2px; bottom: 2px; }
+            #loader:after { top: 8px; left: 8px; right: 8px; bottom: 8px; }
+            #loader-text { margin-top: 0.8rem; font-size: clamp(0.8rem, 2vw, 1rem); }
+        }
+
+        /* Scrolling Banner */
+    .scrolling-banner {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 12px 0;        /* Increased height ~15% */
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 1.25rem;     /* Increased font size ~15% */
+      font-weight: bold;
+    }
+
+    .scrolling-banner a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 24s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    </style>
+    <noscript>
+        <style>
+            #preloader { display: none; }
+            #main-content { display: block; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div id="loader"></div>
+        <div id="loader-text">Hussain Ul Haque</div>
+        <span class="sr-only">Loading content, please wait...</span>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header class="header">
+            <nav class="navbar" aria-label="Main navigation" role="navigation">
+                <div class="logo">
+                    <a href="index.html" aria-label="Hussain Ul Haque Home">Hussain ul Haque</a>
+                    <span class="logo-subtitle">And His Literary Excellence</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="book1.html">Books</a></li>
+                    <li><a href="Award.html">Awards</a></li>
+                    <li><a href="Research.html" class="active">Research</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" role="region" aria-label="Hero section">
+                <div class="hero-content">
+                    <span class="subtitle">Celebrating Scholarly Contributions</span>
+                    <h1 class="title">Research on Hussain ul Haque</h1>
+                </div>
+                <img src="t3.png" alt="Decorative corner image" class="corner-img" loading="lazy" onerror="this.src='fallback.png';">
+            </section>
+            <!-- Scrolling Google Form Link -->
+<div class="scrolling-banner">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSgKvUD8XvgiXJsrn4E52ecPa9S0ZxvLDydWnWrdJ4opvm-A/viewform?usp=dialog" target="_blank">
+    📑 Researchers: Please record your activity. Click here to submit the form at the start or completion of your research.
+  </a>
+</div>
+
+            <section class="container">
+                <div class="research-table-container">
+                    <h2>Research by Scholars</h2>
+                    <table class="research-table" aria-label="Research conducted by scholars on Hussain Ul Haque">
+                        <thead>
+                            <tr>
+                                <th scope="col">S. No</th>
+                                <th scope="col">Name of Scholar</th>
+                                <th scope="col">University</th>
+                                <th scope="col">Degree - Year</th>
+                                <th scope="col">Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Ms. Zabida Naseem</td><td>Delhi University</td><td>PhD - 2023</td><td>Hussainul Haque Bahaysiyat Fictionnigar</td></tr>
+                            <tr><td>2</td><td>Ms. Dilshad Sayeed</td><td>Maulana Azad National Urdu University (MANUU) - Kashmir</td><td>PhD - 2024</td><td>Hussainul Haque Ki Fictionnigari Ka Tahqekee Wa Tanqedi Jayza</td></tr>
+                            <tr><td>3</td><td>Anjum Perveen</td><td>Kazi Nazrul University - Asansol, West Bengal</td><td>M.Phil - 2022 (Completed)</td><td>Hussainul Haque Ki Novelnighari Furat Ki Roshni Main</td></tr>
+                            <tr><td>4</td><td>Tarannum Ara</td><td>Magadh University, Bodh Gaya,Bihar</td><td>PhD - 2022</td><td>Hussainul Haque Ki Adbi Khidmaat Ka Tanqedi Jayza</td></tr>
+                            <tr><td>5</td><td>Kaniz Fatima</td><td>Magadh University, Bodh Gaya,Bihar</td><td>PhD - 2022</td><td>Bihar Main Urdu Novelnighari Aur Taneshee</td></tr>
+                            <tr><td>6</td><td>Razia Perween</td><td>RuheilKhand University - Rampur</td><td>PhD (Completed)</td><td>1980 Ke Bad Urdu Afsana</td></tr>
+                            <tr><td>7</td><td>Mohd Ashfaq</td><td>Aligarh Muslim University</td><td>PhD</td><td>Hussainul Haque Ki Fictionnigari Ka Tahqekee Wa Tanqedi Jayza</td></tr>
+                            <tr><td>8</td><td>Arman Hasan</td><td>Vinoda Bhave University - Hazaribagh, Jharkhand</td><td>PhD</td><td>Hussainul Haque Ke Novelon Main Tahzeebi Anasarnigari</td></tr>
+                            <tr><td>9</td><td>Darakhshan Khursheed</td><td>Kazi Nazrul University - Asansol, West Bengal</td><td>PhD - 2020</td><td>Hussainul Haque – Hayat Wa Khidmaat</td></tr>
+                            <tr><td>10</td><td>Abdul Azeez.K</td><td>Sree Sankararcharya Sanskrit University - Koyilandi, Kerala</td><td>PhD</td><td>Hussainul Haque Ke Urdu Fiction Mein Tahzeebi Thasadum Ka Thajziyati Mutala</td></tr>
+                            <tr><td>11</td><td>Mohd Akbar</td><td>Jawaharlal Nehru University, New Delhi</td><td>PhD</td><td>Hussainul Haque Kya Kidmat</td></tr>
+                            <tr><td>12</td><td>Sajjad Ahmad</td><td>Delhi University</td><td>PhD</td><td>Hussainul Haque Baheseit Fiction Nigar</td></tr>
+                            <tr><td>13</td><td>Ayesha Younas</td><td>Government Graduate College of Pasrur, University of Lahore, Pakistan</td><td>Graduation Degree</td><td>Hussain Ul Haque “Neo Ki Eient”</td></tr>
+                            <tr><td>14</td><td>Shahid Khan</td><td>MJPR University / Bareilly College, Bareilly</td><td>PhD</td><td>Husain Ul Haq: Fikr O Fun Ke Aayine Me</td></tr>
+                            <tr><td>15</td><td>Mohd Faisal</td><td>University of Hyderabad, Gachibowli, Hyderabad</td><td>PhD(2021)</td><td>Hussain-ul-Haq ke Novelon aur Afsanon ka Samaji-o-Saqafti Mutala</td></tr>
+                            <tr><td>16</td><td>Hena Kauser</td><td>University of Hyderabad, Hyderabad</td><td> M.Phil (2009)</td><td> Hussain ul Haque Ke Novel Nigari Ka Tanqeedi Mutalea</td></tr>
+                            <tr><td>17</td><td>Farhat Fatima</td><td>B.R.Ambedkar Bihar University Muzaffarpur, Bihar</td><td> PhD-2022 </td><td> Prof HUSSAINUL HAQUE BAHAISIYAT FICTION NIGAR</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="research-table-container">
+                    <h2>Completed Works on Hussain ul Haque</h2>
+                    <table class="research-table" aria-label="Completed works on Hussain Ul Haque">
+                        <thead>
+                            <tr>
+                                <th scope="col">S. No</th>
+                                <th scope="col">Name of Scholar</th>
+                                <th scope="col">University</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Shahab Azmi</td><td>Patna University</td><td>1995</td><td>Furat - Mutalea wa Muhaseba</td></tr>
+                            <tr><td>2</td><td>Abdurraheem</td><td>SKM University, Jharkhand</td><td>2014</td><td>Hussain Ul Haque ke Afsane</td></tr>
+                            <tr><td>3</td><td>Saleem Ahmad</td><td>Jammu & Kashmir University</td><td>2019</td><td>Furat ek Tajziyah</td></tr>
+                            <tr><td>4</td><td>Sagheer Afraheim</td><td>Aligarh Muslim University</td><td>2019</td><td>Selected Stories of Prof. Hussain Ul Haque</td></tr>
+                            <tr><td>5</td><td>Salis </td><td>Quarterly Urdu Magazine,Munger</td><td>2019</td><td>Hussain Ul Haque ka Khususi Mutalea</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo" id="contact">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:MAHUrduLibrary@mail.com" aria-label="Send email to Maulana Anwarul Haque Urdu Library">MAHUrduLibrary@mail.com</a></p>
+                    <p>Address: Maulana Anwarul Haque Urdu Library,<br> Gaya, Bihar-823001</p>
+                </div>
+                <div class="developer-info">
+                    <h3>Developer</h3>
+                    <p>Md Sahil Johan Islam</p>
+                    <p><a href="mailto:islamsahil752@gmail.com" aria-label="Email developer Md Sahil Johan Islam">islamsahil752@gmail.com</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/MaulanaAnwarulHaqueUrduLibrary/about" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Hussain_Ul_Haque" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="View Hussain Ul Haque on Wikipedia"><i class="fab fa-wikipedia-w"></i></a>
+                </div>
+            </div>
+            <p>© <span id="current-year"></span> Hussain Ul Haque. All rights reserved.</p>
+        </footer>
+
+        <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    </div>
+
+    <script defer>
+        // Utility: Debounce function for scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Preloader Logic
+        function initPreloader() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            if (!preloader || !mainContent) return;
+
+            const minimumLoaderTime = 2000;
+            const startTime = Date.now();
+
+            const hidePreloader = () => {
+                preloader.classList.add('loaded');
+                mainContent.style.display = 'block';
+                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    const container = document.querySelector('.container');
+                    if (container && window.scrollY === 0) {
+                        container.classList.add('visible');
+                        container.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 500);
+            };
+
+            window.addEventListener('load', () => {
+                const elapsedTime = Date.now() - startTime;
+                const remainingTime = Math.max(0, minimumLoaderTime - elapsedTime);
+                setTimeout(hidePreloader, remainingTime);
+            });
+        }
+
+        // Hamburger Menu Toggle
+        function initHamburgerMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (!hamburger || !navLinks) return;
+
+            hamburger.addEventListener('click', () => {
+                const isActive = hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isActive);
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Back to Top Button
+        function initBackToTop() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (!backToTop) return;
+
+            const toggleBackToTop = debounce(() => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+                backToTop.style.opacity = window.scrollY > 300 ? '1' : '0';
+            }, 100);
+
+            window.addEventListener('scroll', toggleBackToTop);
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Section Visibility Observer
+        function initVisibilityObserver() {
+            const containers = document.querySelectorAll('.container');
+            if (!containers.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            containers.forEach(container => observer.observe(container));
+        }
+
+        // Image Accessibility
+        function ensureImageAccessibility() {
+            document.querySelectorAll('img').forEach(img => {
+                if (!img.alt || img.alt.trim() === '') {
+                    img.alt = 'Decorative image';
+                }
+            });
+        }
+
+        // Dynamic Footer Year
+        function setFooterYear() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        }
+
+        // Initialize All Features
+        function initialize() {
+            initPreloader();
+            initHamburgerMenu();
+            initBackToTop();
+            initVisibilityObserver();
+            ensureImageAccessibility();
+            setFooterYear();
+        }
+
+        // Run Initialization
+        try {
+            initialize();
+        } catch (error) {
+            console.error('Initialization error:', error);
+        }
+    </script>
+</body>
+</html>

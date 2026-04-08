@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Hussain Ul Haque at the Maulana Anwarul Haque Urdu Library in Gaya, Bihar or via email for inquiries about his literary works.">
+    <meta name="keywords" content="Hussain Ul Haque, contact, Urdu literature, novelist, Maulana Anwarul Haque Urdu Library, Gaya, Bihar">
+    <meta name="author" content="Hussain Ul Haque">
+    <title>Contact - Hussain Ul Haque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="l1.jpg" type="image/jpeg">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling during loading */
+        }
+
+        html {
+            --s: 18px;
+            --_g: #0000 83%,#ffffff 85% 99%,#0000 101%;
+            background:
+                radial-gradient(22% 24% at right, var(--_g)) calc(var(--s)/ 2) var(--s),
+                radial-gradient(22% 24% at left, var(--_g)) calc(var(--s)/-2) var(--s),
+                radial-gradient(24% 22% at top, var(--_g)) 0 calc(var(--s)/ 2),
+                radial-gradient(24% 22% at bottom, var(--_g)) 0 calc(var(--s)/-2)
+                #024379;
+            background-size: calc(2*var(--s)) calc(2*var(--s));
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #3498db;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 1000;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Loader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #03121e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #loader {
+            display: block;
+            position: relative;
+            width: clamp(100px, 15vw, 150px);
+            height: clamp(100px, 15vw, 150px);
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            animation: spin 2s linear infinite;
+            will-change: transform;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #d4a017;
+            animation: spin 3s linear infinite;
+            will-change: transform;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #2c3e50;
+            animation: spin 1.5s linear infinite;
+            will-change: transform;
+        }
+
+        #loader-text {
+            margin-top: 1.5rem;
+            color: #d4a017;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Loader */
+        @media (max-width: 992px) {
+            #loader {
+                width: clamp(80px, 12vw, 120px);
+                height: clamp(80px, 12vw, 120px);
+            }
+            #loader:before { top: 4px; left: 4px; right: 4px; bottom: 4px; }
+            #loader:after { top: 12px; left: 12px; right: 12px; bottom: 12px; }
+            #loader-text { margin-top: 1.2rem; font-size: clamp(1rem, 2.5vw, 1.3rem); }
+        }
+
+        @media (max-width: 768px) {
+            #loader {
+                width: clamp(60px, 10vw, 100px);
+                height: clamp(60px, 10vw, 100px);
+            }
+            #loader:before { top: 3px; left: 3px; right: 3px; bottom: 3px; }
+            #loader:after { top: 10px; left: 10px; right: 10px; bottom: 10px; }
+            #loader-text { margin-top: 1rem; font-size: clamp(0.9rem, 2.5vw, 1.1rem); }
+        }
+
+        @media (max-width: 576px) {
+            #loader {
+                width: clamp(50px, 8vw, 80px);
+                height: clamp(50px, 8vw, 80px);
+            }
+            #loader:before { top: 2px; left: 2px; right: 2px; bottom: 2px; }
+            #loader:after { top: 8px; left: 8px; right: 8px; bottom: 8px; }
+            #loader-text { margin-top: 0.8rem; font-size: clamp(0.8rem, 2vw, 1rem); }
+        }
+
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ecf0f1;
+            font-family: 'Playfair Display', serif;
+            /* font-size: clamp(1.5rem, 2.5vw, 1.8rem); */
+            font-size: clamp(1.725rem, 2.875vw, 2.07rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo a:hover {
+            color: #3498db;
+        }
+
+        .logo-subtitle {
+            color: #d4a017;
+            font-size: 0.8rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            transition: max-height 0.3s ease;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgb(169, 163, 163, 0.283), rgb(0, 0, 0)), url('b1.jpg') center/cover no-repeat;
+            padding: 8rem 2rem;
+            min-height: 70vh;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            margin-top: 8%;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            /* font-size: clamp(2rem, 5vw, 3.5rem); */
+            font-size: clamp(2.3rem, 5.75vw, 4.025rem);
+            line-height: 1.3;
+        }
+
+        .title span {
+            color: #3498db;
+        }
+
+        .corner-img {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            width: auto;
+            height: clamp(150px, 30vw, 300px);
+            z-index: 1;
+            object-fit: contain;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        /* Section */
+        .section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: scale(1.02);
+        }
+
+        .contact-info i {
+            font-size: 1.8rem;
+            color: #3498db;
+            margin-right: 1rem;
+        }
+
+        .contact-info strong {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-right: 0.5rem;
+        }
+
+        .contact-info p, .contact-info a {
+            font-size: 0.95rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        .contact-info a:focus-visible {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        /* Map Container */
+        .map-container {
+            margin-top: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            display: block;
+        }
+
+        .map-caption {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .developer-info, .social-media {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .footer p, .footer a {
+            font-size: 0.95rem;
+            color: #bdc3c7;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #3498db;
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+            color: #bdc3c7;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-icon:hover {
+            color: #3498db;
+            transform: scale(1.1);
+        }
+
+        .footer-divider {
+            border-top: 1px solid #34495e;
+            margin: 1.5rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                position: relative;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 1.2rem;
+                z-index: 100;
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: 400px;
+            }
+
+            .nav-links a {
+                padding: 0.8rem;
+                font-size: 1.1rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 40vh;
+            }
+
+            .hero-content {
+                margin-top: 0;
+            }
+
+            .corner-img {
+                width: clamp(100px, 20vw, 180px);
+                height: clamp(120px, 25vw, 240px);
+                bottom: 0.75rem;
+                left: 0.75rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-info i {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 30vh;
+            }
+
+            .title {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .corner-img {
+                width: clamp(80px, 15vw, 120px);
+                height: clamp(90px, 20vw, 180px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .container {
+                padding: 2rem 0.75rem;
+            }
+
+            .section {
+                padding: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .section h2 {
+                font-size: clamp(1rem, 2.5vw, 1.5rem);
+            }
+
+            .map-container iframe {
+                height: 250px;
+            }
+
+            .contact-info i {
+                font-size: 1.5rem;
+            }
+
+            .contact-info strong {
+                font-size: clamp(1rem, 2.5vw, 1.1rem);
+            }
+
+            .contact-info p, .contact-info a {
+                font-size: clamp(0.85rem, 2vw, 0.9rem);
+            }
+
+            .social-icon {
+                font-size: 1.5rem;
+            }
+
+            .logo a {
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 2rem 1rem;
+                min-height: 35vh;
+            }
+
+            .title {
+                font-size: clamp(1.2rem, 4vw, 1.8rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+
+            .corner-img {
+                width: clamp(60px, 12vw, 100px);
+                height: clamp(75px, 15vw, 150px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .container {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .section {
+                padding: 0.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .section h2 {
+                font-size: clamp(1rem, 2vw, 1.3rem);
+            }
+
+            .contact-info {
+                padding: 0.75rem;
+            }
+
+            .contact-info i {
+                font-size: 1.6rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .contact-info strong {
+                font-size: clamp(1rem, 2.5vw, 1.15rem);
+            }
+
+            .contact-info p, .contact-info a {
+                font-size: clamp(0.85rem, 2vw, 0.95rem);
+            }
+
+            .map-container iframe {
+                height: 200px;
+            }
+
+            .map-caption {
+                font-size: 0.85rem;
+            }
+
+            .nav-links {
+                padding: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+            }
+
+            .footer {
+                padding: 2rem 0.5rem;
+            }
+
+            .footer-content {
+                gap: 0.5rem;
+            }
+
+            .developer-info, .social-media {
+                min-width: 0;
+            }
+
+            .social-icon {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div id="loader"></div>
+        <div id="loader-text">Hussain ul Haque</div>
+        <span class="sr-only">Loading content, please wait...</span>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header class="header">
+            <nav class="navbar" aria-label="Main navigation">
+                <div class="logo">
+                    <a href="index.html" aria-label="Hussain Ul Haque Home">Hussain ul Haque</a>
+                    <span class="logo-subtitle">And His Literary Excellence</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="book1.html">Books</a></li>
+                    <li><a href="Award.html">Awards</a></li>
+                    <li><a href="Research.html">Research</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" role="region" aria-label="Hero section">
+                <div class="hero-content">
+                    <span class="subtitle">Get in Touch</span>
+                    <h1 class="title">Hussain ul Haque<br>A Visionary, A Teacher and A Writer</h1>
+                </div>
+                <img src="t3.png" alt="Decorative corner image" class="corner-img" loading="lazy">
+            </section>
+
+            <section class="container">
+                <article class="section" role="region" aria-describedby="contact-description">
+                    <h2>Contact Information</h2>
+                    <p id="contact-description" class="sr-only">Details to reach Hussain ul Haque, including address and email of the Maulana Anwarul Haque Urdu Library.</p>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>Maulana Anwarul Haque Urdu Library, New Karimganj, <br>Gaya, Bihar- 823001</p>
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.019304849592!2d84.98425397514978!3d24.7947924779722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32bab9715ee73%3A0xe4823c889fccaa3b!2sMaulana%20Anwarul%20Haque%20Urdu%20Library%20(Personal)!5e0!3m2!1sen!2sin!4v1741932116950!5m2!1sen!2sin" title="Map of Maulana Anwarul Haque Urdu Library location" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" tabindex="0"></iframe>
+                                    <p class="map-caption">Visit us in Gaya, Bihar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <strong>Email:</strong>
+                            <a href="mailto:MAHUrduLibrary@Mail.com" aria-label="Send email to Maulana Anwarul Haque Urdu Library">MAHUrduLibrary@Mail.com</a>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <strong>Library FB:</strong>
+                            <a href="https://www.facebook.com/MaulanaAnwarulHaqueUrduLibrary/about" target="_blank" rel="noopener noreferrer" aria-label="Visit Maulana Anwarul Haque Urdu Library Facebook page">Visit Page</a>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <strong>Khanqah FB:</strong>
+                            <a href="https://www.facebook.com/profile.php?id=100063766284059&sk=about" target="_blank" rel="noopener noreferrer" aria-label="Visit Khanqah Facebook page">Visit Page</a>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-blog" aria-hidden="true"></i>
+                            <strong>Hussain ul Haque Blog:</strong>
+                            <a href="https://hussainulhaquevisittousainindianmedia.blogspot.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hussain Ul Haque's blog">Visit Blog</a>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fab fa-wikipedia-w" aria-hidden="true"></i>
+                            <strong>Wikipedia:</strong>
+                            <a href="https://en.wikipedia.org/wiki/Hussain_Ul_Haque" target="_blank" rel="noopener noreferrer" aria-label="Visit Hussain Ul Haque's Wikipedia page">Visit Wikipedia</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="developer-info">
+                    <h3>Developer</h3>
+                    <p>Md Sahil Johan Islam</p>
+                    <p><a href="mailto:islamsahil752@gmail.com" aria-label="Email developer Md Sahil Johan Islam">islamsahil752@gmail.com</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/MaulanaAnwarulHaqueUrduLibrary/about" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Hussain_Ul_Haque" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="View Hussain Ul Haque on Wikipedia"><i class="fab fa-wikipedia-w"></i></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p>© 2025 Hussain Ul Haque. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Preloader and Auto-Scroll Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            const minimumLoaderTime = 1500;
+            const startTime = Date.now();
+
+            const hidePreloader = () => {
+                preloader.classList.add('loaded');
+                mainContent.style.display = 'block';
+                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    const container = document.querySelector('.container');
+                    if (container) {
+                        container.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 500);
+            };
+
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minimumLoaderTime - elapsedTime);
+            setTimeout(hidePreloader, remainingTime);
+        });
+
+        // Ensure Images are Accessible
+        document.querySelectorAll('img').forEach(img => {
+            if (!img.alt || img.alt.trim() === '') {
+                img.alt = 'Decorative image';
+            }
+        });
+    </script>
+</body>
+</html>

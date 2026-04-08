@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the published works of Hussain Ul Haque, including novels, short stories, and Sufi literature, alongside books by his father, Maulana Anwarul Haque.">
+    <meta name="keywords" content="Hussain Ul Haque, Urdu literature, books, novels, short stories, Sufism, Maulana Anwarul Haque">
+    <meta name="author" content="Hussain Ul Haque">
+    <title>Publications - Hussain Ul Haque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="l1.jpg" type="image/png">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        html {
+            --s: 18px;
+            --_g: #0000 83%,#ffffff 85% 99%,#0000 101%;
+            background:
+                radial-gradient(22% 24% at right, var(--_g)) calc(var(--s)/ 2) var(--s),
+                radial-gradient(22% 24% at left, var(--_g)) calc(var(--s)/-2) var(--s),
+                radial-gradient(24% 22% at top, var(--_g)) 0 calc(var(--s)/ 2),
+                radial-gradient(24% 22% at bottom, var(--_g)) 0 calc(var(--s)/-2)
+                #024379;
+            background-size: calc(2*var(--s)) calc(2*var(--s));
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #03121e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #loader {
+            position: relative;
+            width: clamp(100px, 15vw, 150px);
+            height: clamp(100px, 15vw, 150px);
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            animation: spin 2s linear infinite;
+            will-change: transform;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #d4a017;
+            animation: spin 3s linear infinite;
+            will-change: transform;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #2c3e50;
+            animation: spin 1.5s linear infinite;
+            will-change: transform;
+        }
+
+        #loader-text {
+            margin-top: 1.5rem;
+            color: #d4a017;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ecf0f1;
+            font-family: 'Playfair Display', serif;
+            /* font-size: clamp(1.5rem, 2.5vw, 1.8rem); */
+            font-size: clamp(1.725rem, 2.875vw, 2.07rem);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo a:hover {
+            color: #3498db;
+        }
+
+        .logo-subtitle {
+            color: #d4a017;
+            font-size: 0.8rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            transition: max-height 0.3s ease;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgb(169, 163, 163, 0.283), rgb(0, 0, 0)), url('b1.jpg') center/cover no-repeat;
+            padding: 8rem 2rem;
+            min-height: 70vh;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            margin-top: 8%;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            /* font-size: clamp(2rem, 5vw, 3.5rem); */
+            font-size: clamp(2.3rem, 5.75vw, 4.025rem);
+            line-height: 1.3;
+        }
+
+        .title span {
+            color: #3498db;
+        }
+
+        .corner-img {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            width: auto;
+            height: clamp(150px, 30vw, 300px);
+            z-index: 1;
+            object-fit: contain;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section */
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Book Grid */
+        .book-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .book {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .book img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .book-name {
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            max-width: min(95vw, 1000px);
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            padding: 2.5rem;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .popup-left {
+            flex: 1;
+            text-align: center;
+            margin-right: 1.5rem;
+        }
+
+        .popup-image {
+            width: 100%;
+            max-width: 400px;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn {
+            background: #2c3e50;
+            color: #ecf0f1;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background: #3498db;
+            transform: scale(1.1);
+        }
+
+        .popup-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .popup-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .popup-headline span {
+            color: #3498db;
+        }
+
+        .comments-section {
+            flex: 1;
+            max-height: 500px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 1rem;
+        }
+
+        .comments-section.empty::before {
+            content: "No comments yet. Be the first to comment!";
+            display: block;
+            text-align: center;
+            color: #555;
+            font-style: italic;
+        }
+
+        .comment-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+            background: #fff;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .comment-item:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comment-text {
+            flex: 1;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .comment-timestamp {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.3rem;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .like-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .like-btn.liked {
+            color: #3498db;
+        }
+
+        .edit-btn, .delete-btn {
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background: #3498db;
+        }
+
+        .delete-btn {
+            background: #e63946;
+        }
+
+        .delete-btn:hover {
+            background: #d00000;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .comment-input, #username-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .comment-input {
+            height: 80px;
+            resize: none;
+        }
+
+        .error-message {
+            color: #e63946;
+            font-size: 0.85rem;
+            display: none;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .exit-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #e63946;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .exit-btn:hover {
+            background: #d00000;
+            transform: scale(1.1);
+        }
+
+        /* Table */
+        .award-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .award-table th,
+        .award-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .award-table th {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+
+        .award-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Lists */
+        .text-container ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .text-container li {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .text-container li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-info, .developer-info, .social-media {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .footer p, .footer a {
+            font-size: 1rem;
+            color: #bdc3c7;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #3498db;
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+            color: #bdc3c7;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #3498db;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive Preloader */
+        @media (max-width: 992px) {
+            #loader {
+                width: clamp(80px, 12vw, 120px);
+                height: clamp(80px, 12vw, 120px);
+            }
+            #loader:before { top: 4px; left: 4px; right: 4px; bottom: 4px; }
+            #loader:after { top: 12px; left: 12px; right: 12px; bottom: 12px; }
+            #loader-text { margin-top: 1.2rem; font-size: clamp(1rem, 2.5vw, 1.3rem); }
+        }
+
+        @media (max-width: 768px) {
+            #loader {
+                width: clamp(60px, 10vw, 100px);
+                height: clamp(60px, 10vw, 100px);
+            }
+            #loader:before { top: 3px; left: 3px; right: 3px; bottom: 3px; }
+            #loader:after { top: 10px; left: 10px; right: 10px; bottom: 10px; }
+            #loader-text { margin-top: 1rem; font-size: clamp(0.9rem, 2.5vw, 1.1rem); }
+        }
+
+        @media (max-width: 576px) {
+            #loader {
+                width: clamp(50px, 8vw, 80px);
+                height: clamp(50px, 8vw, 80px);
+            }
+            #loader:before { top: 2px; left: 2px; right: 2px; bottom: 2px; }
+            #loader:after { top: 8px; left: 8px; right: 8px; bottom: 8px; }
+            #loader-text { margin-top: 0.8rem; font-size: clamp(0.8rem, 2vw, 1rem); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                position: relative;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 0;
+                z-index: 100;
+            }
+
+            .nav-links.active {
+                display: flex;
+                max-height: 400px;
+                padding: 0.5rem;
+            }
+
+            .nav-links a {
+                padding: 0.6rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 50vh;
+            }
+
+            .hero-content {
+                margin-top: 0;
+            }
+
+            .corner-img {
+                height: clamp(120px, 25vw, 240px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .book-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 0.75rem;
+            }
+
+            .popup-content {
+                flex-direction: column;
+                padding: 1.5rem;
+                max-width: min(95vw, 800px);
+            }
+
+            .popup-left {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .popup-image {
+                max-width: 300px;
+                max-height: 350px;
+            }
+
+            .comments-section {
+                max-height: 300px;
+            }
+
+            .popup-headline {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 40vh;
+            }
+
+            .title {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+
+            .corner-img {
+                height: clamp(90px, 20vw, 180px);
+                bottom: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .section {
+                padding: 1rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .section h2 {
+                font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            }
+
+            .award-table th, .award-table td {
+                font-size: 0.9rem;
+                padding: 0.75rem;
+            }
+
+            .text-container li {
+                font-size: 1rem;
+            }
+
+            .book-container {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            .logo a {
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+
+            .social-icon {
+                font-size: 1.5rem;
+            }
+
+            .back-to-top {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 2rem 1rem;
+                min-height: 30vh;
+            }
+
+            .title {
+                font-size: clamp(1.2rem, 4vw, 1.8rem);
+            }
+
+            .subtitle {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+
+            .corner-img {
+                height: clamp(75px, 15vw, 150px);
+            }
+
+            .section {
+                padding: 0.75rem;
+            }
+
+            .section h2 {
+                font-size: clamp(1rem, 2vw, 1.3rem);
+            }
+
+            .award-table th, .award-table td {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+            }
+
+            .text-container li {
+                font-size: 0.9rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 0.4rem;
+            }
+
+            .footer-content {
+                gap: 0.5rem;
+            }
+
+            .social-icon {
+                font-size: 1.2rem;
+            }
+
+            .back-to-top {
+                width: 30px;
+                height: 30px;
+            }
+
+            .popup-headline {
+                font-size: 1.4rem;
+            }
+
+            .comment-input, #username-input {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            .submit-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div id="loader"></div>
+        <div id="loader-text">Hussain ul Haque</div>
+        <span class="sr-only">Loading content, please wait...</span>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header class="header">
+            <nav class="navbar" aria-label="Main navigation">
+                <div class="logo">
+                    <a href="index.html" aria-label="Hussain Ul Haque Home">Hussain ul Haque</a>
+                    <span class="logo-subtitle">And His Literary Excellence</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="book1.html" class="active">Books</a></li>
+                    <li><a href="Award.html">Awards</a></li>
+                    <li><a href="Research.html">Research</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" role="region" aria-label="Hero section">
+                <div class="hero-content">
+                    <span class="subtitle">A Legacy in Urdu Literature</span>
+                    <h1 class="title">Hussain ul Haque<br>A Visionary, A Teacher and A Writer</h1>
+                </div>
+                <img src="t3.png" alt="Decorative corner image" class="corner-img" loading="lazy">
+            </section>
+
+            <section class="container">
+                <article class="section" aria-describedby="books-description">
+                    <h2>Books by Hussain ul Haque</h2>
+                    <p id="books-description" class="sr-only">A collection of books written by Hussain ul Haque, showcasing his contributions to Urdu literature and Sufism.</p>
+                    <div class="book-container">
+                        <div class="book" onclick="openPopup(0)">
+                            <img src="img for book/a1.jpg" alt="Musafir ka Khawab cover" loading="lazy">
+                            <div class="book-name">Musafir ka Khawab</div>
+                        </div>
+                        <div class="book" onclick="openPopup(1)">
+                            <img src="img for book/b2.jpg" alt="Pas-e-Parda Shab cover" loading="lazy">
+                            <div class="book-name">Pas-e-Parda Shab</div>
+                        </div>
+                        <div class="book" onclick="openPopup(2)">
+                            <img src="img for book/c1.jpg" alt="Tafheem-e-Tasawwuf cover" loading="lazy">
+                            <div class="book-name">Tafheem-e-Tasawwuf</div>
+                        </div>
+                        <div class="book" onclick="openPopup(3)">
+                            <img src="img for book/d1.jpg" alt="Asar-e-Baghawat cover" loading="lazy">
+                            <div class="book-name">Asar-e-Baghawat</div>
+                        </div>
+                        <div class="book" onclick="openPopup(4)">
+                            <img src="img for book/e1.jpg" alt="Ghanay Jungalo Mein" loading="lazy">
+                            <div class="book-name">Ghanay Jungalo Mein</div>
+                        </div>
+                        <div class="book" onclick="openPopup(5)">
+                            <img src="img for book/f1.jpg" alt="Furat (Novel)" loading="lazy">
+                            <div class="book-name">Furat (Novel)</div>
+                        </div>
+                        <div class="book" onclick="openPopup(6)">
+                            <img src="img for book/g1.jpg" alt="Surat e Haal" loading="lazy">
+                            <div class="book-name">Surat e Haal</div>
+                        </div>
+                        <div class="book" onclick="openPopup(7)">
+                            <img src="img for book/i1.jpg" alt="Asar-e-Hazrat Wasi cover" loading="lazy">
+                            <div class="book-name">Asar-e-Hazrat Wasi</div>
+                        </div>
+                        <div class="book" onclick="openPopup(8)">
+                            <img src="img for book/j1.jpg" alt="Amawas Mein Khawab cover" loading="lazy">
+                            <div class="book-name">Amawas Mein Khawab</div>
+                        </div>
+                        <div class="book" onclick="openPopup(9)">
+                            <img src="img for book/k1.jpg" alt="Sui ki Nok par Ruka Lamha cover" loading="lazy">
+                            <div class="book-name">Sui ki Nok par Ruka Lamha</div>
+                        </div>
+                        <div class="book" onclick="openPopup(10)">
+                            <img src="img for book/l1.jpg" alt="Islam ke Ibtedai Ahd ka Nizam-e-Taleem cover" loading="lazy">
+                            <div class="book-name">Islam ke Ibtedai Ahd ka Nizam-e-Taleem</div>
+                        </div>
+                        <div class="book" onclick="openPopup(11)">
+                            <img src="img for book/m1.jpg" alt="Neon ki Eent cover" loading="lazy">
+                            <div class="book-name">Neon ki Eent</div>
+                        </div>
+                        <div class="book" onclick="openPopup(12)">
+                            <img src="img for book/n1.jpg" alt="Adab Hajj wa Ziyarat cover" loading="lazy">
+                            <div class="book-name">Adab Hajj wa Ziyarat</div>
+                        </div>
+                        <div class="book" onclick="openPopup(13)">
+                            <img src="img for book/o1.jpg" alt="Nasr ki Ahmiyat cover" loading="lazy">
+                            <div class="book-name">Nasr ki Ahmiyat</div>
+                        </div>
+                    </div>
+                </section>
+                
+                    <div class="popup" id="popup" role="dialog" aria-labelledby="popup-headline" aria-describedby="popup-description">
+                        <div class="popup-content">
+                            <button class="exit-btn" onclick="closePopup()" aria-label="Close popup"><i class="fas fa-times"></i></button>
+                            <div class="popup-left">
+                                <img class="popup-image" id="popup-img" src="" alt="Book cover" loading="lazy">
+                                <div class="nav-buttons">
+                                    <button class="nav-btn" onclick="prevImage()" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="nav-btn" onclick="nextImage()" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="popup-right">
+                                <div class="popup-headline" id="popup-headline"></div>
+                                <p id="popup-description" class="sr-only">Details and comments about the selected book.</p>
+                                <div class="comments-section" id="comments-list" aria-label="User comments"></div>
+                                <form class="comment-form" aria-label="Comment submission form">
+                                    <label for="username-input" class="sr-only">Username</label>
+                                    <input type="text" id="username-input" placeholder="Your username" required aria-label="Username">
+                                    <p class="error-message" id="username-error">Please enter a valid username.</p>
+                                    <label for="comment-input" class="sr-only">Comment</label>
+                                    <textarea class="comment-input" id="comment-input" placeholder="Write your comment here (max 500 characters)..." required aria-label="Comment text" maxlength="500"></textarea>
+                                    <p class="error-message" id="comment-error">Please enter a comment.</p>
+                                    <button class="submit-btn" type="button" onclick="addComment()" aria-label="Submit comment">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- <section class="container"></section> -->
+                <article class="section text-container" aria-describedby="published-books-description">
+                    <h2>Published Books</h2>
+                    <p id="published-books-description" class="sr-only">A chronological list of published books by Hussain ul Haque, including poetry, novels, and short story collections.</p>
+                    <table class="award-table" aria-label="Published books by Hussain Ul Haque">
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Published Books</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Aakhri Geet (Poetry)</td><td>1977</td></tr>
+                            <tr><td>2</td><td>Pas-E-Parda-e-Shab (Short Story), Reprint in 2022</td><td>1981</td></tr>
+                            <tr><td>3</td><td>Soorat-E-Hal (Short Stories)</td><td>1982</td></tr>
+                            <tr><td>4</td><td>Barish Mein Ghira Makan (Short Stories)</td><td>1984</td></tr>
+                            <tr><td>5</td><td>Ghane Janglon Mein -(Short Stories)</td><td>1989</td></tr>
+                            <tr><td>6</td><td>Bolo Mat Chup Raho (Novel)</td><td>1990</td></tr>
+                            <tr><td>7</td><td>Furat  (Novel),Reprint in 2015</td><td>1992</td></tr>
+                            <tr><td>8</td><td>Matla (Short Stories)</td><td>1996</td></tr>
+                            <tr><td>9</td><td>Sui ki Nok Par Ruka Lamha (Short Stories)</td><td>1997</td></tr>
+                            <tr><td>10</td><td>Aasar-E-Hazrat Wasi (Biography)</td><td>2001</td></tr>
+                            <tr><td>11</td><td> Aasar-E-Hazrat Waheed Banarsi (Edited by Hussain ul Haque)</td><td>2003</td></tr>
+                            <tr><td>12</td><td>Neon ki Eent (Short Stories)</td><td>2009</td></tr>
+                            <tr><td>13</td><td>Nasr ki Ahmiyat</td><td>2013</td></tr>
+                            <tr><td>14</td><td>Urdu Fiction Hindustan Mein</td><td>2014</td></tr>
+                            <tr><td>15</td><td>Tafheem-e-Tasavvuf </td><td>2015</td></tr>
+                            <tr><td>16</td><td>Aasar-E-Baghawat - (Historical–Revolt of 1857) </td><td>2016</td></tr>
+                            <tr><td>17</td><td>Amavas Mein Khawab (Novel)</td><td>2017</td></tr>
+                            <tr><td>18</td><td>Hussain ul Haque ke Muntakhab Afsane  - Edited by Prof. Sagheer Afraheen </td><td>2019</td></tr>
+                            <tr><td>19</td><td>Islam ke Ibtedai Ahd Ka Nizam -e Taleem - Translated by Hussain ul Haque </td><td>2021</td></tr>
+                            <tr><td>20</td><td>Maktoobaat Banam Hazrat Nazish Sahsarami </td><td>2022</td></tr>
+                            <tr><td>21</td><td>Musafir ka Khawab (Edited by Dr. Ainain Ali Haque)</td><td>2025</td></tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="section text-container" aria-describedby="father-books-description">
+                    <h2>Books by Maulana Anwarul Haque</h2>
+                    <p id="father-books-description" class="sr-only">A list of books authored by Maulana Anwarul Haque, father of Hussain Ul Haque, focusing on Sufism and Islamic thought.</p>
+                    <ul>
+                        <li>Wahdat-e-Ilah</li>
+                        <li>Tasawwuf aur Rahbaniyat ki Haqiqat</li>
+                        <li>Islam ka Roohani Nizam</li>
+                        <li>Sharf-e-Adam ka Noktay Urooj</li>
+                        <li>Harf-e-Tamanna (Poetry Collection)</li>
+                        <li>Maqalat-e-Maulana Shahoodi</li>
+                        <li>Harim-e-Shouq (Compiled by Dr. Zain Ramish)</li>
+                    </ul>
+                </article>
+
+                <article class="section text-container" aria-describedby="current-work-description">
+                    <h2>Current Work on Hussain ul Haque</h2>
+                    <p id="current-work-description" class="sr-only">Ongoing research and publication efforts related to Hussain Ul Haque’s literary contributions.</p>
+                    <ul>
+                        <li>15 research scholars are pursuing PhD studies on Hussain Ul Haque’s work at various universities in India.</li>
+                        <li>A collection of papers presented at the 2024 webinar on Hussain Ul Haque’s work is being prepared for publication.</li>
+                        <li>Reprint of Hussain ul Haque’s first novel, <em>Bolo Mat Chup Raho</em>, is in progress.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:MAHUrduLibrary@mail.com" aria-label="Send email to Maulana Anwarul Haque Urdu Library">MAHUrduLibrary@mail.com</a></p>
+                    <p>Address: Maulana Anwarul Haque Urdu Library, <br> Gaya, Bihar-823001</p>
+                </div>
+                <div class="developer-info">
+                    <h3>Developer</h3>
+                    <p>Md Sahil Johan Islam</p>
+                    <p><a href="mailto:islamsahil752@gmail.com" aria-label="Email developer Md Sahil Johan Islam">islamsahil752@gmail.com</a></p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/MaulanaAnwarulHaqueUrduLibrary/about" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://en.wikipedia.org/wiki/Hussain_Ul_Haque" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="View Hussain Ul Haque on Wikipedia"><i class="fab fa-wikipedia-w"></i></a>
+                </div>
+            </div>
+            <p>© 2025 Hussain Ul Haque. All rights reserved.</p>
+        </footer>
+
+        <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    </div>
+
+    <script>
+        // Book Data
+        const books = [
+            {
+                images: ["img for book/a1.jpg", "img for book/a2.jpg", "img for book/a3.jpg", "img for book/a4.jpg", "img for book/a5.jpg", "img for book/a6.jpg", "img for book/a7.jpg"],
+                title: "Musafir ka Khawab",
+                description: "A profound exploration of dreams and journeys."
+            },
+            {
+                images: ["img for book/b2.jpg", "img for book/b1.jpg", "img for book/b10.jpg", "img for book/b11.jpg", "img for book/b12.jpg", "img for book/b3.jpg", "img for book/b6.jpg"],
+                title: "Pas-e-Parda Shab",
+                description: "A deep dive into the mysteries of the night."
+            },
+            {
+                images: ["img for book/c1.jpg", "img for book/c2.jpg", "img for book/c3.jpg", "img for book/c4.jpg", "img for book/c5.jpg", "img for book/c6.jpg", "img for book/c7.jpg"],
+                title: "Tafheem-e-Tasawwuf",
+                description: "An insightful guide to understanding Sufism."
+            },
+            {
+                images: ["img for book/d1.jpg", "img for book/d2.jpg", "img for book/d3.jpg", "img for book/d4.jpg", "img for book/d5.jpg", "img for book/d6.jpg", "img for book/d7.jpg"],
+                title: "Asar-e-Baghawat",
+                description: "A historical account of the Revolt of 1857."
+            },
+            {
+                images: ["img for book/e1.jpg", "img for book/e2.jpg", "img for book/e3.jpg", "img for book/e4.jpg", "img for book/e5.jpg", "img for book/e6.jpg"],
+                title: "Ghanay Jungalo Mein",
+                description: "A collection of evocative short stories."
+            },
+            {
+                images: ["img for book/f1.jpg", "img for book/f2.jpg", "img for book/f3.jpg", "img for book/f4.jpg", "img for book/f5.jpg", "img for book/f6.jpg"],
+                title: "Furat (Novel)",
+                description: "Short stories capturing human emotions."
+            },
+            {
+                images: ["img for book/g1.jpg", "img for book/g2.jpg", "img for book/g3.jpg", "img for book/g4.jpg", "img for book/g5.jpg", "img for book/g6.jpg"],
+                title: "Surat e Haal",
+                description: "Tales set in dense, metaphorical jungles."
+            },
+            {
+                images: ["img for book/i1.jpg", "img for book/i2.jpg", "img for book/i3.jpg", "img for book/i4.jpg", "img for book/i5.jpg", "img for book/i6.jpg"],
+                title: "Asar-e-Hazrat Wasi",
+                description: "A biography of a revered Sufi figure."
+            },
+            {
+                images: ["img for book/j1.jpg", "img for book/j2.jpg", "img for book/j3.jpg", "img for book/j4.jpg", "img for book/j5.jpg", "img for book/j6.jpg"],
+                title: "Amawas Mein Khawab",
+                description: "A novel exploring dreams in darkness."
+            },
+            {
+                images: ["img for book/k1.jpg", "img for book/k2.jpg", "img for book/k3.jpg", "img for book/k4.jpg", "img for book/k5.jpg", "img for book/k6.jpg"],
+                title: "Sui ki Nok par Ruka Lamha",
+                description: "Short stories frozen in poignant moments."
+            },
+            {
+                images: ["img for book/l1.jpg", "img for book/l2.jpg", "img for book/l3.jpg", "img for book/l4.jpg", "img for book/l5.jpg", "img for book/l6.jpg"],
+                title: "Islam ke Ibtedai Ahd ka Nizam-e-Taleem",
+                description: "A study of early Islamic education systems."
+            },
+            {
+                images: ["img for book/m1.jpg", "img for book/m2.jpg", "img for book/m3.jpg", "img for book/m4.jpg", "img for book/m5.jpg", "img for book/m6.jpg"],
+                title: "Neon ki Eent",
+                description: "Short stories reflecting modern struggles."
+            },
+            {
+                images: ["img for book/n1.jpg", "img for book/n2.jpg", "img for book/n3.jpg", "img for book/n4.jpg", "img for book/n5.jpg", "img for book/n6.jpg"],
+                title: "Adab Hajj wa Ziyarat",
+                description: "A guide to the etiquette of Hajj and Ziyarat."
+            },
+            {
+                images: ["img for book/o1.jpg", "img for book/o2.jpg", "img for book/o3.jpg", "img for book/o4.jpg", "img for book/o5.jpg", "img for book/o6.jpg"],
+                title: "Nasr ki Ahmiyat",
+                description: "An exploration of the significance of prose."
+            }
+        ];
+
+        // Preload images
+        books.forEach(book => {
+            book.images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        });
+
+        let currentBookIndex = 0;
+        let currentImageIndex = 0;
+        let currentUser = null;
+
+        // Load comments from localStorage
+        function loadComments(bookIndex) {
+            const comments = JSON.parse(localStorage.getItem(`comments_${bookIndex}`)) || [];
+            const commentsList = document.getElementById("comments-list");
+            commentsList.innerHTML = "";
+            if (comments.length === 0) {
+                commentsList.classList.add("empty");
+            } else {
+                commentsList.classList.remove("empty");
+                comments.forEach((comment, index) => {
+                    const commentDiv = createCommentElement(comment, index, bookIndex);
+                    commentsList.appendChild(commentDiv);
+                });
+            }
+            commentsList.scrollTop = commentsList.scrollHeight;
+        }
+
+        function createCommentElement(comment, commentIndex, bookIndex) {
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment-item");
+            commentDiv.dataset.commentIndex = commentIndex;
+
+            const commentTextDiv = document.createElement("div");
+            commentTextDiv.classList.add("comment-text");
+            commentTextDiv.innerHTML = `<strong>${sanitizeHTML(comment.username)}:</strong> ${sanitizeHTML(comment.text)}`;
+            const timestampDiv = document.createElement("div");
+            timestampDiv.classList.add("comment-timestamp");
+            timestampDiv.textContent = new Date(comment.timestamp).toLocaleString();
+
+            const commentActions = document.createElement("div");
+            commentActions.classList.add("comment-actions");
+
+            const likeBtn = document.createElement("button");
+            likeBtn.classList.add("like-btn");
+            likeBtn.innerHTML = `<i class='fas fa-heart'></i> ${comment.likes || 0}`;
+            if (comment.likedBy && comment.likedBy.includes(currentUser)) {
+                likeBtn.classList.add("liked");
+            }
+            likeBtn.onclick = () => toggleLike(commentDiv, bookIndex, commentIndex);
+
+            const editBtn = document.createElement("button");
+            editBtn.textContent = "Edit";
+            editBtn.classList.add("edit-btn");
+            editBtn.onclick = () => editComment(commentDiv, bookIndex, commentIndex);
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.classList.add("delete-btn");
+            deleteBtn.onclick = () => {
+                if (currentUser === comment.username) {
+                    if (confirm("Are you sure you want to delete this comment?")) {
+                        deleteComment(bookIndex, commentIndex);
+                    }
+                } else {
+                    alert("You can only delete your own comments!");
+                }
+            };
+
+            if (currentUser !== comment.username) {
+                editBtn.style.display = "none";
+                deleteBtn.style.display = "none";
+            }
+
+            commentActions.appendChild(likeBtn);
+            commentActions.appendChild(editBtn);
+            commentActions.appendChild(deleteBtn);
+            commentTextDiv.appendChild(timestampDiv);
+            commentDiv.appendChild(commentTextDiv);
+            commentDiv.appendChild(commentActions);
+            return commentDiv;
+        }
+
+        function openPopup(index) {
+            currentBookIndex = index;
+            currentImageIndex = 0;
+            updatePopup();
+            const popup = document.getElementById("popup");
+            popup.style.display = "flex";
+            loadComments(currentBookIndex);
+            popup.focus();
+            trapFocus(popup);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+            currentUser = null;
+            releaseFocus();
+        }
+
+        function updatePopup() {
+            const book = books[currentBookIndex];
+            const imgElement = document.getElementById("popup-img");
+            imgElement.src = book.images[currentImageIndex];
+            imgElement.alt = `${book.title} cover`;
+            imgElement.onerror = () => {
+                imgElement.src = "default.jpg";
+                imgElement.alt = "Default book cover";
+            };
+            document.getElementById("popup-headline").innerHTML = `<span>${sanitizeHTML(book.title)}</span><br>${sanitizeHTML(book.description)}`;
+        }
+
+        function nextImage() {
+            const book = books[currentBookIndex];
+            currentImageIndex = (currentImageIndex + 1) % book.images.length;
+            updatePopup();
+        }
+
+        function prevImage() {
+            const book = books[currentBookIndex];
+            currentImageIndex = (currentImageIndex - 1 + book.images.length) % book.images.length;
+            updatePopup();
+        }
+
+        function addComment() {
+            const usernameInput = document.getElementById("username-input");
+            const commentInput = document.getElementById("comment-input");
+            const usernameError = document.getElementById("username-error");
+            const commentError = document.getElementById("comment-error");
+            const username = usernameInput.value.trim();
+            const commentText = commentInput.value.trim();
+
+            usernameError.style.display = "none";
+            commentError.style.display = "none";
+
+            if (!username) {
+                usernameError.style.display = "block";
+                usernameInput.focus();
+                return;
+            }
+            if (!commentText) {
+                commentError.style.display = "block";
+                commentInput.focus();
+                return;
+            }
+
+            currentUser = username;
+            const comments = JSON.parse(localStorage.getItem(`comments_${currentBookIndex}`)) || [];
+            const newComment = {
+                username,
+                text: commentText,
+                timestamp: new Date().toISOString(),
+                likes: 0,
+                likedBy: []
+            };
+            comments.push(newComment);
+            localStorage.setItem(`comments_${currentBookIndex}`, JSON.stringify(comments));
+
+            loadComments(currentBookIndex);
+            usernameInput.value = "";
+            commentInput.value = "";
+        }
+
+        function editComment(commentDiv, bookIndex, commentIndex) {
+            const comments = JSON.parse(localStorage.getItem(`comments_${bookIndex}`)) || [];
+            const comment = comments[commentIndex];
+            if (currentUser !== comment.username) {
+                alert("You can only edit your own comments!");
+                return;
+            }
+
+            const newText = prompt("Edit your comment:", comment.text);
+            if (newText !== null && newText.trim()) {
+                comments[commentIndex].text = newText.trim();
+                comments[commentIndex].timestamp = new Date().toISOString();
+                localStorage.setItem(`comments_${bookIndex}`, JSON.stringify(comments));
+                loadComments(bookIndex);
+            }
+        }
+
+        function deleteComment(bookIndex, commentIndex) {
+            const comments = JSON.parse(localStorage.getItem(`comments_${bookIndex}`)) || [];
+            comments.splice(commentIndex, 1);
+            localStorage.setItem(`comments_${bookIndex}`, JSON.stringify(comments));
+            loadComments(bookIndex);
+        }
+
+        function toggleLike(commentDiv, bookIndex, commentIndex) {
+            const comments = JSON.parse(localStorage.getItem(`comments_${bookIndex}`)) || [];
+            const comment = comments[commentIndex];
+
+            if (currentUser === comment.username) {
+                alert("You cannot like your own comment!");
+                return;
+            }
+
+            if (!comment.likedBy) comment.likedBy = [];
+            const likeBtn = commentDiv.querySelector(".like-btn");
+            if (!comment.likedBy.includes(currentUser)) {
+                comment.likes = (comment.likes || 0) + 1;
+                comment.likedBy.push(currentUser);
+                likeBtn.classList.add("liked");
+            } else {
+                comment.likes--;
+                comment.likedBy = comment.likedBy.filter(user => user !== currentUser);
+                likeBtn.classList.remove("liked");
+            }
+            likeBtn.innerHTML = `<i class='fas fa-heart'></i> ${comment.likes}`;
+            localStorage.setItem(`comments_${bookIndex}`, JSON.stringify(comments));
+        }
+
+        function sanitizeHTML(str) {
+            const div = document.createElement("div");
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // Focus Trapping
+        function trapFocus(element) {
+            const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+
+            element.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusable) {
+                            e.preventDefault();
+                            lastFocusable.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusable) {
+                            e.preventDefault();
+                            firstFocusable.focus();
+                        }
+                    }
+                }
+                if (e.key === 'Escape') {
+                    closePopup();
+                }
+            });
+
+            firstFocusable.focus();
+        }
+
+        function releaseFocus() {
+            document.removeEventListener('keydown', trapFocus);
+        }
+
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector(".back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Initialize Popup
+        document.getElementById("popup").addEventListener("click", (e) => {
+            if (e.target === document.getElementById("popup")) closePopup();
+        });
+
+        // Preloader and Auto-Scroll Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            const minimumLoaderTime = 2000;
+            const startTime = Date.now();
+
+            const hidePreloader = () => {
+                preloader.classList.add('loaded');
+                mainContent.style.display = 'block';
+                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    const container = document.querySelector('.container');
+                    if (container) {
+                        container.classList.add('visible');
+                        container.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 500);
+            };
+
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minimumLoaderTime - elapsedTime);
+            setTimeout(hidePreloader, remainingTime);
+        });
+
+        // Section Visibility on Scroll
+        const containers = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        containers.forEach(container => observer.observe(container));
+
+        // Ensure Images are Accessible
+        document.querySelectorAll('img').forEach(img => {
+            if (!img.alt || img.alt.trim() === '') {
+                img.alt = 'Decorative image';
+            }
+        });
+    </script>
+</body>
+</html>

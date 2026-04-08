@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Loader</title>
+    <!-- Include Font Awesome for book and pen icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #222;
+            overflow: hidden; /* Prevent scrolling during loading */
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure loader is on top */
+        }
+
+        #loader {
+            display: block;
+            position: relative;
+            width: clamp(100px, 15vw, 150px); /* Scales between 100px and 150px */
+            height: clamp(100px, 15vw, 150px);
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #4b4d08; /* Dark gold */
+            animation: spin 2s linear infinite;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #6d7513; /* Medium gold */
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #fff700; /* Bright gold */
+            animation: spin 1.5s linear infinite;
+        }
+
+        /* Book and Pen Icon */
+        #loader-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(1.5rem, 3vw, 2rem); /* Scales icon size */
+            color: #d9c10c; /* Gold color to match text */
+            animation: pulse 2s ease-in-out infinite; /* Subtle scaling animation */
+            z-index: 1; /* Ensure icon is above rings */
+        }
+
+        #loader-text {
+            margin-top: 1.5rem;
+            color: #d9c10c; /* Gold text */
+            font-family: Arial, sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.5rem); /* Scales between 1.2rem and 1.5rem */
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pulse animation for book and pen icon */
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        #main-content {
+            display: none;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Tablet (up to 992px) */
+        @media (max-width: 992px) {
+            #loader {
+                width: clamp(80px, 12vw, 120px);
+                height: clamp(80px, 12vw, 120px);
+            }
+
+            #loader:before {
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                bottom: 4px;
+            }
+
+            #loader:after {
+                top: 12px;
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+            }
+
+            #loader-icon {
+                font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            }
+
+            #loader-text {
+                margin-top: 1.2rem;
+                font-size: clamp(1rem, 2.5vw, 1.3rem);
+            }
+        }
+
+        /* Phone (up to 768px) */
+        @media (max-width: 768px) {
+            #loader {
+                width: clamp(60px, 10vw, 100px);
+                height: clamp(60px, 10vw, 100px);
+            }
+
+            #loader:before {
+                top: 3px;
+                left: 3px;
+                right: 3px;
+                bottom: 3px;
+            }
+
+            #loader:after {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+
+            #loader-icon {
+                font-size: clamp(1rem, 2vw, 1.3rem);
+            }
+
+            #loader-text {
+                margin-top: 1rem;
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            }
+        }
+
+        /* Extra Small Phones (up to 576px) */
+        @media (max-width: 576px) {
+            #loader {
+                width: clamp(50px, 8vw, 80px);
+                height: clamp(50px, 8vw, 80px);
+            }
+
+            #loader:before {
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+            }
+
+            #loader:after {
+                top: 8px;
+                left: 8px;
+                right: 8px;
+                bottom: 8px;
+            }
+
+            #loader-icon {
+                font-size: clamp(0.8rem, 1.8vw, 1rem);
+            }
+
+            #loader-text {
+                margin-top: 0.8rem;
+                font-size: clamp(0.8rem, 2vw, 1rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div id="loader">
+            <!-- Book and Pen Icon -->
+            <i id="loader-icon" class="fas fa-book"></i>
+        </div>
+        <div id="loader-text">Hussain ul Haque</div>
+    </div>
+    <div id="main-content">
+        <h1>Welcome to the Website</h1>
+        <p>This is the main content of your website.</p>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }, 2000); // Adjust delay as needed
+        });
+    </script>
+</body>
+</html>
